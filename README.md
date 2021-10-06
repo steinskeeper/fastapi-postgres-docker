@@ -1,6 +1,6 @@
 # FastAPI + Postgres + Docker Compose + Heroku Deploy
 
-> :warning: **For educational purpose only. Not for production use YET**
+> :warning: **For educational purpose only. Not ready for production use YET**
 
 ### Features
 1. FastAPI with Postgres setup
