@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  server:
+    build: .
+    
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/code
+    environment:
+      DATABASE: postgres
+      DB_NAME: dbname
+      HOST_ADDRESS: 172.17.0.1:5432
+      DB_USER: postgres
+      DB_PASSWORD: password
+      TYPE: dev
+    depends_on:
+      - db
+    entrypoint: /code/entrypoint.sh
+    
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: dbname
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_HOSTNAME: localhost:5432
+      POSTGRES_HOST_AUTH_METHOD: trust
+
+    ports:
+      - "5432:5432"
