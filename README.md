@@ -41,3 +41,8 @@
 1. Change back --port 5000 to --port $PORT in `entrypoint.sh`
  
 
+
+
+### Infrastructure model
+
+![Infrastructure model](.infragenie/infrastructure_model.png)
